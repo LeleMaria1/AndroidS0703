@@ -3,4 +3,5 @@
     <string name="welcome">Bem vindo(a) ao meu app!</string>
     <string name="welcomeButtonText">Enviar mensagem</string>
     <string name="welcomeToast">Pipipopo (°>!</string>
+    <string name="trocaImagemButton">Substituir imagem principal</string>
 </resources>

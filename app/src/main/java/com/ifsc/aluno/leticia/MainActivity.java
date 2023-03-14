@@ -2,10 +2,10 @@ package com.ifsc.aluno.leticia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,18 +16,31 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button welcomeButton = findViewById(R.id.welcomeButton);
-        welcomeButton.setOnClickListener(new View.OnClickListener() {
+        welcomeButton.setOnClickListener(view -> { minhaAcao(); });
+
+        Button trocaImagemButton = findViewById(R.id.trocaImagemButton);
+
+        ImageView imagem = findViewById(R.id.welcomeImageView);
+
+        trocaImagemButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                //inicializa as informações necessárias para criar uma mensagem Toast
-                Context contexto = MainActivity.this;
-                CharSequence mensagem = getResources().getString(R.string.welcomeToast);
-                int duracao = Toast.LENGTH_SHORT;
-                //cria uma mensagem Toast com as informações acima
-                Toast myToast = Toast.makeText(contexto, mensagem, duracao);
-                //manda mostrar a mensagem Toast
-                myToast.show();
+            public void onClick(View v) {
+                imagem.setImageResource(R.drawable.androidpipo);
             }
         });
+
     }
+
+
+
+    void minhaAcao(){
+        Toast.makeText(
+                this,               //Contexto da aplicação
+                R.string.welcomeToast,     //Mensagem textual
+                Toast.LENGTH_SHORT        //Tempo de duração
+        ).show();                  //show => mostrar mensagem (IMPORTANTE)
+    }
+
+
+
 }
