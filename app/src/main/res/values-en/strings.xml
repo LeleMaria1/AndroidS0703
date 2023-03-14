@@ -3,5 +3,6 @@
     <string name="app_name">App0703</string>
     <string name="welcome">Welcome to my app!</string>
     <string name="welcomeButtonText">Send message</string>
-    <string name="welcomeToast">Welcome!</string>
+    <string name="welcomeToast">Popopipi (º>!</string>
+    <string name="trocaImagemButton">Replace image</string>
 </resources>
